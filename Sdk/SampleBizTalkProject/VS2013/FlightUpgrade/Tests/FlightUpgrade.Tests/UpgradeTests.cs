@@ -107,6 +107,7 @@ namespace BizUnit.Sdk.FlightUpgrade.Tests
             responseXpath.Value = "true";
             validation.XPathValidations.Add(responseXpath);
 
+            // Check that an output file has been created.
             var finalFileReadStep = new FileReadMultipleStep();
             finalFileReadStep.DirectoryPath = @"C:\Temp\BizTalk\BizUnitSdkOut";
             finalFileReadStep.SearchPattern = "*.xml";
