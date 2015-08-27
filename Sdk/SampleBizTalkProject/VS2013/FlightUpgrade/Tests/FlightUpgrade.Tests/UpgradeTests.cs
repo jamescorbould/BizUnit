@@ -67,7 +67,7 @@ namespace BizUnit.Sdk.FlightUpgrade.Tests
         public void Upgrade_Eligible_Test_FILE()
         {
             var testCase = new TestCase();
-            testCase.Name = "Upgrade_Eligible_Test";
+            testCase.Name = "Upgrade_Eligible_Test_FILE";
             testCase.Purpose = "Test successful upgrade";
             testCase.Description = "Test upgrade succeeds for passenger/flight eligible for upgrade";
             testCase.Category = "BizUnit SDK: BVT";
