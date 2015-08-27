@@ -64,6 +64,79 @@ namespace BizUnit.Sdk.FlightUpgrade.Tests
         #endregion
 
         [TestMethod]
+        public void Upgrade_Eligible_Test_FILE()
+        {
+            var testCase = new TestCase();
+            testCase.Name = "Upgrade_Eligible_Test";
+            testCase.Purpose = "Test successful upgrade";
+            testCase.Description = "Test upgrade succeeds for passenger/flight eligible for upgrade";
+            testCase.Category = "BizUnit SDK: BVT";
+            testCase.Reference = "Use case: 10.3.4";
+            testCase.ExpectedResults = "Upgrade succeeds";
+            testCase.Preconditions = "Solution should be deployed, bound and started";
+
+            // First ensure the target directory is empty...
+            var delFiles = new DeleteStep();
+            delFiles.FilePathsToDelete = new Collection<string> { @"C:\Temp\BizTalk\BizUnitSdkOut\*.xml" };
+            testCase.SetupSteps.Add(delFiles);
+
+            // Then execute the main scenario.
+            var testStep = new CreateStep();
+            
+            // Where are we going to create the file.
+            testStep.CreationPath = @"C:\Temp\BizTalk\BizUnitSdkIn\Request.xml";
+            var dataLoader = new FileDataLoader();
+            // Where are we getting the original file from?
+            dataLoader.FilePath = @"..\..\Data\Request.xml";
+            testStep.DataSource = dataLoader;
+
+            testCase.ExecutionSteps.Add(testStep);
+
+            // Create a validating read step.
+            // We should only have one file in the directory.
+            var validatingFileReadStep = new FileReadMultipleStep
+            {
+                DirectoryPath = @"C:\Temp\BizTalk\BizUnitSdkIn",
+                SearchPattern = "*.xml",
+                ExpectedNumberOfFiles = 1,
+                Timeout = 10000,
+                DeleteFiles = true
+            };
+
+            testCase.ExecutionSteps.Add(validatingFileReadStep);
+
+            // Add validation....
+            var validation = new XmlValidationStep();
+            var schemaResultType = new SchemaDefinition
+            {
+                XmlSchemaPath = @"..\..\..\Src\FlightUpgrade\ResponseMsg.xsd",
+                XmlSchemaNameSpace = "http://bizUnit.sdk.flightUpgrade/upgradeResponse"
+            };
+            validation.XmlSchemas.Add(schemaResultType);
+
+            var responseXpath = new XPathDefinition();
+            responseXpath.Description = "GetProducts_RS/Result/result";
+            responseXpath.XPath = "/*[local-name()='UpgradeResponse' and namespace-uri()='http://bizUnit.sdk.flightUpgrade/upgradeResponse']/*[local-name()='UpgradeResult' and namespace-uri()='']/*[local-name()='Result' and namespace-uri()='']";
+            responseXpath.Value = "true";
+            validation.XPathValidations.Add(responseXpath);
+
+            var finalFileReadStep = new FileReadMultipleStep();
+            finalFileReadStep.DirectoryPath = @"C:\Temp\BizTalk\BizUnitSdkOut";
+            finalFileReadStep.SearchPattern = "*.xml";
+            finalFileReadStep.ExpectedNumberOfFiles = 1;
+            finalFileReadStep.Timeout = 5000;
+            finalFileReadStep.DeleteFiles = true;
+
+            validatingFileReadStep.SubSteps.Add(validation);
+            testCase.ExecutionSteps.Add(validatingFileReadStep);
+            testCase.ExecutionSteps.Add(finalFileReadStep);
+
+            var bizUnit = new BizUnit(testCase);
+            bizUnit.RunTest();
+            TestCase.SaveToFile(testCase, "Upgrade_Eligible_Test_File.xml");
+        }
+
+        [TestMethod]
         public void Upgrade_Elligable_Test()
         {
             var testCase = new TestCase();
