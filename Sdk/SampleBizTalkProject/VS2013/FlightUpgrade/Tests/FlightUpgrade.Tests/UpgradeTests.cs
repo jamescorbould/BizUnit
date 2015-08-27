@@ -92,24 +92,11 @@ namespace BizUnit.Sdk.FlightUpgrade.Tests
 
             testCase.ExecutionSteps.Add(testStep);
 
-            // Create a validating read step.
-            // We should only have one file in the directory.
-            var validatingFileReadStep = new FileReadMultipleStep
-            {
-                DirectoryPath = @"C:\Temp\BizTalk\BizUnitSdkIn",
-                SearchPattern = "*.xml",
-                ExpectedNumberOfFiles = 1,
-                Timeout = 10000,
-                DeleteFiles = true
-            };
-
-            testCase.ExecutionSteps.Add(validatingFileReadStep);
-
             // Add validation....
             var validation = new XmlValidationStep();
             var schemaResultType = new SchemaDefinition
             {
-                XmlSchemaPath = @"..\..\..\Src\FlightUpgrade\ResponseMsg.xsd",
+                XmlSchemaPath = @"..\..\..\..\Src\FlightUpgrade\ResponseMsg.xsd",
                 XmlSchemaNameSpace = "http://bizUnit.sdk.flightUpgrade/upgradeResponse"
             };
             validation.XmlSchemas.Add(schemaResultType);
@@ -125,15 +112,14 @@ namespace BizUnit.Sdk.FlightUpgrade.Tests
             finalFileReadStep.SearchPattern = "*.xml";
             finalFileReadStep.ExpectedNumberOfFiles = 1;
             finalFileReadStep.Timeout = 5000;
-            finalFileReadStep.DeleteFiles = true;
+            finalFileReadStep.DeleteFiles = false;
 
-            validatingFileReadStep.SubSteps.Add(validation);
-            testCase.ExecutionSteps.Add(validatingFileReadStep);
+            finalFileReadStep.SubSteps.Add(validation);
             testCase.ExecutionSteps.Add(finalFileReadStep);
 
             var bizUnit = new BizUnit(testCase);
             bizUnit.RunTest();
-            TestCase.SaveToFile(testCase, "Upgrade_Eligible_Test_File.xml");
+            TestCase.SaveToFile(testCase, System.String.Format("Upgrade_Eligible_Test_File_{0}.xml", System.String.Format("{0:yyyy-MM-dd-hh_mm_ss}",  System.DateTime.Now)));
         }
 
         [TestMethod]
