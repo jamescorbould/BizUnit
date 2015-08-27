@@ -90,12 +90,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <XLang Include="ProcessUpgradeRequest.odx">
-      <TypeName>ProcessRequest</TypeName>
-      <Namespace>SampleProject</Namespace>
-    </XLang>
-  </ItemGroup>
-  <ItemGroup>
     <Schema Include="RequestMsg.xsd">
       <TypeName>RequestMsg</TypeName>
       <Namespace>SampleProject</Namespace>
@@ -136,6 +130,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="ProcessUpgradeRequest2.odx">
+      <TypeName>ProcessUpgradeRequest_Copy</TypeName>
+      <Namespace>BizUnit.Sdk.FlightUpgrade</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
