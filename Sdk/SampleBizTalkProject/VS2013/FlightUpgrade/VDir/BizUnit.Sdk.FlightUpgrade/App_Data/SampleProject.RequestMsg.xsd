@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://bizUnit.sdk.flightUpgrade/upgradeRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="https://BizUnit.Sdk.FlightUpgrade.FlightProperties" targetNamespace="http://bizUnit.sdk.flightUpgrade/upgradeRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo />
+  </xs:annotation>
+  <xs:element name="UpgradeRequest">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CustomerDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" type="xs:string" />
+              <xs:element name="LastName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="FlightDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightBookingNumber" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="UpgradeDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RequestedCabin" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

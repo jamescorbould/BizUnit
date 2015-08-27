@@ -1,0 +1,12 @@
+﻿<ns0:UpgradeRequest xmlns:ns0="http://bizUnit.sdk.flightUpgrade/upgradeRequest">
+  <CustomerDetails>
+    <FirstName>Jon</FirstName>
+    <LastName>Fancey</LastName>
+  </CustomerDetails>
+  <FlightDetails>
+    <FlightBookingNumber>123456A</FlightBookingNumber>
+  </FlightDetails>
+  <UpgradeDetails>
+    <RequestedCabin>Upper</RequestedCabin>
+  </UpgradeDetails>
+</ns0:UpgradeRequest>

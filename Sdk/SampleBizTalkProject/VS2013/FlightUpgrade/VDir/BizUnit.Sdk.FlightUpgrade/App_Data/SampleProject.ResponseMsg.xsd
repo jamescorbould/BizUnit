@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://bizUnit.sdk.flightUpgrade/upgradeResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="https://BizUnit.Sdk.FlightUpgrade.FlightProperties" targetNamespace="http://bizUnit.sdk.flightUpgrade/upgradeResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo />
+  </xs:annotation>
+  <xs:element name="UpgradeResponse">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CustomerDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" type="xs:string" />
+              <xs:element name="LastName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="FlightDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightBookingNumber" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="DepartureAirport" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="DestinationAirport" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="DepartureDate" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="Cabin" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="UpgradeResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element default="false" name="Result" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

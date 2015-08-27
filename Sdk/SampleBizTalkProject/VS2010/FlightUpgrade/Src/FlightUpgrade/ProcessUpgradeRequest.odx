@@ -1,0 +1,393 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="ddf8997b-cbf6-4488-a1ea-771c50369caa" LowerBound="1.1" HigherBound="81.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="BizUnit.Sdk.FlightUpgrade" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="03793025-831a-48e6-9eb7-1c5074291918" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="349492c3-130b-4e41-9978-25c90b79b5a6" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RequestUpgrade" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="5a6323e4-1689-4c1d-836a-791e7a9d9165" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.37">
+                    <om:Property Name="Ref" Value="SampleProject.RequestMsg" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="c50f4da4-f6c1-4f00-9a87-c17130326e18" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.39" HigherBound="8.64">
+                    <om:Property Name="Ref" Value="SampleProject.ResponseMsg" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="506d86ac-b87e-479d-b778-e0ad81cd4bfe" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_2" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="6786bdc1-b2f4-4333-b925-fc0cf4d32e64" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ProcessUpgrade" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="f6ae3bba-10ca-4d36-b5d8-f4f6ebaca510" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.37">
+                    <om:Property Name="Ref" Value="SampleProject.RequestMsg" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="569e4faf-8906-4969-b123-03d51fb518f0" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_3" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="a4acc949-ebca-455f-a0a6-fd3aacd7a662" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpgradeResult" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="b3156746-3287-4f2f-a52b-0a0628b3a85a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.38">
+                    <om:Property Name="Ref" Value="SampleProject.ResponseMsg" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b8fb63a6-e0c5-4a69-bb3d-1b340425cc77" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="UpgradePortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="6ec26454-8359-4544-b3ab-065e336ff9cc" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Upgrade" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="b297de23-333a-4782-ae26-a518e1e570dc" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.37">
+                    <om:Property Name="Ref" Value="SampleProject.RequestMsg" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="1cc3b0c4-70b6-4ada-9007-22aa5c06583b" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="29.39" HigherBound="29.64">
+                    <om:Property Name="Ref" Value="SampleProject.ResponseMsg" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="1af67d77-b690-4bfb-a461-223fa473d37b" ParentLink="Module_ServiceDeclaration" LowerBound="36.1" HigherBound="80.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessRequest" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="5a4773da-09ee-4ea9-a0ec-80a1ce9bc78b" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="48.1" HigherBound="49.1">
+                <om:Property Name="InitialValue" Value="false" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="IsFlexibleTicket" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="22b25bbe-3312-484e-b3c0-b45b7620c759" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="49.1" HigherBound="50.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FltBookNum" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="CorrelationDeclaration" OID="72bcdda0-d4a1-4ccd-904b-8f9bb2455c93" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="Type" Value="BizUnit.Sdk.FlightUpgrade.FlightBookingNumberCorrelationType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FlightBookingNumberCorrelationSet" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="2089eb3a-6f7f-456e-b6ce-7d0aa93fe06f" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="72.58" HigherBound="72.102">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="189823a6-0a66-4528-8af9-7e3ae3ba51f9" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="StatementRef" OID="06e233cc-8637-4be8-8d43-eb214033d9e0" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="74.61" HigherBound="74.94">
+                    <om:Property Name="Initializes" Value="False" />
+                    <om:Property Name="Ref" Value="d5e028da-c8f2-4a7a-94dc-b249629523b4" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_2" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d98fa611-c44e-4a7c-b086-5993ac894ad2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="Type" Value="SampleProject.RequestMsg" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="9491f53f-9be1-4367-866d-58b81591de2e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="Type" Value="SampleProject.ResponseMsg" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="9fdf1ab5-1d5b-41fe-bd7b-1941a7024abb" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="563d445d-4b97-4d20-a5ab-7bc06bca6b7a" ParentLink="ServiceBody_Statement" LowerBound="52.1" HigherBound="56.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="UpgradePort" />
+                    <om:Property Name="MessageName" Value="msgRequest" />
+                    <om:Property Name="OperationName" Value="Upgrade" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="b28350a9-31d0-47c4-b66e-f9418f359382" ParentLink="ServiceBody_Statement" LowerBound="56.1" HigherBound="59.1">
+                    <om:Property Name="Expression" Value="FltBookNum = msgRequest(BizUnit.Sdk.FlightUpgrade.FlightBookingNumber);&#xD;&#xA;IsFlexibleTicket = FltBookNum.EndsWith(&quot;F&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="LookupTicketType" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="a59240e1-046c-4639-9867-7b68680b1a3b" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="76.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Decide_1" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="DecisionBranch" OID="3cb893cc-2ec3-4075-a62c-9f5282fc2150" ParentLink="ReallyComplexStatement_Branch" LowerBound="60.13" HigherBound="69.1">
+                        <om:Property Name="Expression" Value="IsFlexibleTicket == false" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="TicketNotFlexible" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="e133e570-0b15-45b0-ae4e-3a9a2e2b7691" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="68.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructResponse" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="340a9bb0-2795-4150-b68b-429f3f8737d0" ParentLink="ComplexStatement_Statement" LowerBound="65.1" HigherBound="67.1">
+                                <om:Property Name="ClassName" Value="SampleProject.NoUpgradeMap" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="NoUpgrade" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="a820f5ab-b466-4980-8794-938944960c35" ParentLink="Transform_InputMessagePartRef" LowerBound="66.75" HigherBound="66.85">
+                                    <om:Property Name="MessageRef" Value="msgRequest" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="090e291f-ab4d-4494-9b7e-d6d2e5723070" ParentLink="Transform_OutputMessagePartRef" LowerBound="66.32" HigherBound="66.43">
+                                    <om:Property Name="MessageRef" Value="msgResponse" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="c0ae2da1-2bd4-4a23-80b4-4786b4b3e396" ParentLink="Construct_MessageRef" LowerBound="63.27" HigherBound="63.38">
+                                <om:Property Name="Ref" Value="msgResponse" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="9a7dbd7b-8634-4f2a-9773-e9d4de0b79fa" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Send" OID="189823a6-0a66-4528-8af9-7e3ae3ba51f9" ParentLink="ComplexStatement_Statement" LowerBound="71.1" HigherBound="73.1">
+                            <om:Property Name="PortName" Value="Port_2" />
+                            <om:Property Name="MessageName" Value="msgRequest" />
+                            <om:Property Name="OperationName" Value="ProcessUpgrade" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_2" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="d5e028da-c8f2-4a7a-94dc-b249629523b4" ParentLink="ComplexStatement_Statement" LowerBound="73.1" HigherBound="75.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="Port_3" />
+                            <om:Property Name="MessageName" Value="msgResponse" />
+                            <om:Property Name="OperationName" Value="UpgradeResult" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_2" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="a087883c-e060-4a23-b5e9-213b60948826" ParentLink="ServiceBody_Statement" LowerBound="76.1" HigherBound="78.1">
+                    <om:Property Name="PortName" Value="UpgradePort" />
+                    <om:Property Name="MessageName" Value="msgResponse" />
+                    <om:Property Name="OperationName" Value="Upgrade" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="76e03a68-777f-4d40-bb4a-a676b302ffac" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="39.1" HigherBound="41.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="19" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BizUnit.Sdk.FlightUpgrade.PortType_3" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_3" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="9dca6e38-93a7-49fc-a41c-7e60493a7499" ParentLink="PortDeclaration_CLRAttribute" LowerBound="39.1" HigherBound="40.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6cdd0109-ba30-4a69-b06b-40a08bb35460" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="41.1" HigherBound="43.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="17" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BizUnit.Sdk.FlightUpgrade.PortType_2" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_2" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="5f2b1d9b-3a8c-4d90-af7d-381ef475bdb1" ParentLink="PortDeclaration_CLRAttribute" LowerBound="41.1" HigherBound="42.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="42d80526-2fa4-433e-ab5e-02abcb715c7b" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="43.1" HigherBound="45.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Unbound" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BizUnit.Sdk.FlightUpgrade.UpgradePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpgradePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="56160db1-e0ba-425e-85c6-cd061364dd51" ParentLink="PortDeclaration_CLRAttribute" LowerBound="43.1" HigherBound="44.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="6e5e3520-844e-46c7-a0f2-f6a860fbd966" ParentLink="Module_CorrelationType" LowerBound="32.1" HigherBound="36.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="FlightBookingNumberCorrelationType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="a46ede06-86e7-4757-8d04-41b191074f38" ParentLink="CorrelationType_PropertyRef" LowerBound="34.9" HigherBound="34.28">
+                <om:Property Name="Ref" Value="BizUnit.Sdk.FlightUpgrade.FlightBookingNumber" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module BizUnit.Sdk.FlightUpgrade
+{
+    internal porttype PortType_1
+    {
+        requestresponse RequestUpgrade
+        {
+            SampleProject.RequestMsg, SampleProject.ResponseMsg
+        };
+    };
+    internal porttype PortType_2
+    {
+        oneway ProcessUpgrade
+        {
+            SampleProject.RequestMsg
+        };
+    };
+    internal porttype PortType_3
+    {
+        oneway UpgradeResult
+        {
+            SampleProject.ResponseMsg
+        };
+    };
+    public porttype UpgradePortType
+    {
+        requestresponse Upgrade
+        {
+            SampleProject.RequestMsg, SampleProject.ResponseMsg
+        };
+    };
+    internal correlationtype FlightBookingNumberCorrelationType
+    {
+        FlightBookingNumber
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessRequest
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_3 Port_3;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_2 Port_2;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements UpgradePortType UpgradePort;
+        correlation FlightBookingNumberCorrelationType FlightBookingNumberCorrelationSet;
+        message SampleProject.RequestMsg msgRequest;
+        message SampleProject.ResponseMsg msgResponse;
+        System.Boolean IsFlexibleTicket;
+        System.String FltBookNum;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("563d445d-4b97-4d20-a5ab-7bc06bca6b7a")]
+            activate receive (UpgradePort.Upgrade, msgRequest);
+            IsFlexibleTicket = false;
+            FltBookNum = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b28350a9-31d0-47c4-b66e-f9418f359382")]
+            FltBookNum = msgRequest(BizUnit.Sdk.FlightUpgrade.FlightBookingNumber);
+            IsFlexibleTicket = FltBookNum.EndsWith("F");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a59240e1-046c-4639-9867-7b68680b1a3b")]
+            if (IsFlexibleTicket == false)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e133e570-0b15-45b0-ae4e-3a9a2e2b7691")]
+                construct msgResponse
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("340a9bb0-2795-4150-b68b-429f3f8737d0")]
+                    transform (msgResponse) = SampleProject.NoUpgradeMap (msgRequest);
+                }
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("189823a6-0a66-4528-8af9-7e3ae3ba51f9")]
+                send (Port_2.ProcessUpgrade, msgRequest, initialize FlightBookingNumberCorrelationSet);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d5e028da-c8f2-4a7a-94dc-b249629523b4")]
+                receive (Port_3.UpgradeResult, msgResponse, FlightBookingNumberCorrelationSet);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a087883c-e060-4a23-b5e9-213b60948826")]
+            send (UpgradePort.Upgrade, msgResponse);
+        }
+    }
+}
+

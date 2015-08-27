@@ -1,0 +1,16 @@
+<ns0:UpgradeResponse xmlns:ns0="http://SampleProject.Response">
+  <CustomerDetails>
+    <FirstName>Kevin</FirstName>
+    <LastName>Smith</LastName>
+  </CustomerDetails>
+  <FlightDetails>
+    <FlightBookingNumber>12345F</FlightBookingNumber>
+    <DepartureAirport>LHR</DepartureAirport>
+    <DestinationAirport>LAX</DestinationAirport>
+    <DepartureDate>1/6/2011 10:00</DepartureDate>
+    <Cabin>Upper</Cabin>
+  </FlightDetails>
+  <UpgradeResult>
+    <Result>true</Result>
+  </UpgradeResult>
+</ns0:UpgradeResponse>
